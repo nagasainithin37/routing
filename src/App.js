@@ -8,6 +8,9 @@ import './App.css';
 function App() {
   return (
     <div>
+
+      {/* Nav Bar */}
+      {/* href should be updatedd to to and a to navlink or link */}
 <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
     <a className="navbar-brand" to="#">Navbar</a>
@@ -33,13 +36,16 @@ function App() {
   </div>
 </nav>
 
-
+{/*  ROutes */}
 <Routes>
 <Route path="" element={<Home/>}/>
 <Route path="users" element={<Users/>}/>
+{/*  Nested routing in about us */}
 <Route path="aboutus" element={<Aboutus/>}>
+  {/*  Nested Routes */}
 <Route path="contactus" element={<Contactus/>}/>
 <Route path="services" element={<Services/>}/>
+{/*  Default route in nested route use navigator */}
 <Route path="" element={<Navigate replace to="Services"/>}/>
   </Route>
   
